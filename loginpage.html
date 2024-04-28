@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Login page
+        </title>
+        
+        <link rel="stylesheet" type="text/css" href="login.css">
+    </head>
+
+    <body>
+        <script>  
+            function validateform(){  
+            var name=document.myform.name.value;  
+            var password=document.myform.password.value;  
+              
+            if (name==null || name==""){  
+              alert("Enter a valid Username");  
+              return false;  
+            }else if(password.length<6){  
+              alert("Password must be at least 6 characters long.");  
+              return false;  
+              }  
+            }  
+       </script> 
+        <div class="loginbox">
+            <img src="image.jpg" class="avatar">
+            <h1>Login Here</h1>
+            <form name="myform" action="h.html" onsubmit="return validateform()">
+                <p>Username</p>
+                <input type="text" name="name" placeholder="Enter Username">
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password">
+                <input type="Submit" name="" value="login">
+                <p><a href="signin.html">Don't Have an account! Create one</a></p>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            Login page
+        </title>
+        
+        <link rel="stylesheet" type="text/css" href="signincss.css">
+    </head>
+
+    <body>
+        <script>  
+            function verifyPassword(){  
+            var name=document.myform.name.value;
+            var username=document.myform.username.value;  
+            var password=document.myform.password.value;  
+            var password2=document.myform.password2.value;
+
+              
+            if(password.length<6 && password2.length<6)
+            {  
+              alert("Password must be at least 6 characters long.");  
+              return false;  
+              }
+            else if(password != password2){  
+              alert("Both passwords don't match.");  
+              return false;  
+              }  
+            }  
+       </script> 
+ 
+        <div class="loginbox">
+            <img src="image.jpg" class="avatar">
+            <h1>SignIn here</h1>
+            <form name="myform" action="../Loginpage/loginpage.html" onsubmit ="return verifyPassword()">
+                <p>Full Name</p>
+                <input type="text" name="name" placeholder="Enter Your name" required>
+                <p>Email ID</p>
+                <input type="email" name="email" placeholder="Enter Email Id" required>
+                <p>Username</p>
+                <input type="text" name="username" placeholder="Enter Username" required>
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password">
+                <p>Re-Enter Password</p>
+                <input type="password" name="password2" placeholder="Re-Enter Password">
+                <input type="Submit" name="Submit" value="login">
+            </form>
+        </div>
+        
+    </body>
+</html>
